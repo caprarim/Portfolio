@@ -18,23 +18,33 @@
 }
 
 body {
-    background: url('./assets/bg_clean.png') no-repeat center center fixed;
+    background: url('./assets/bg.png') no-repeat center center fixed;
     background-size: cover;
     background-color: var(--black);
-    height: 100vh;
-    width: 100vw;
-    overflow: hidden;
+    min-height: 100vh;
+    min-height: 100dvh;
+    width: 100%;
+    overflow-x: hidden;
+    overflow-y: auto;
+}
+
+html,
+#root {
+    min-height: 100vh;
+    min-height: 100dvh;
 }
 
 .home-layout {
     display: flex;
-    height: 100vh;
-    width: 100vw;
+    min-height: 100vh;
+    min-height: 100dvh;
+    width: 100%;
     position: relative;
 }
 
 .sidebar {
     width: 260px;
+    flex-shrink: 0;
     background: var(--sidebar-dynamic-bg, var(--sidebar-bg));
     backdrop-filter: blur(40px);
     -webkit-backdrop-filter: blur(40px);
@@ -126,6 +136,7 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
+    padding: 40px;
     transition: background 0.5s ease;
 }
 
@@ -137,6 +148,7 @@ body {
     padding: 80px 60px;
     width: 100%;
     max-width: 500px;
+    margin: 0 auto;
     text-align: center;
     box-shadow: 0 40px 100px rgba(0, 0, 0, 1);
     border-radius: 40px;
@@ -240,7 +252,8 @@ body {
 .portfolio-container {
     width: 100%;
     max-width: 900px;
-    padding: 40px;
+    padding: 40px 20px;
+    margin: 0 auto;
     display: flex;
     flex-direction: column;
     gap: 50px;
@@ -380,6 +393,7 @@ body {
 
 .social-links {
     display: flex;
+    flex-wrap: wrap;
     gap: 20px;
 }
 
@@ -436,4 +450,265 @@ body {
 [style*="background: rgba(255, 255, 255, 0.9)"] .social-link:hover {
     background: var(--gold);
     color: black;
+}
+
+@media (max-width: 1024px) {
+    body {
+        background-attachment: scroll;
+    }
+
+    .home-layout {
+        flex-direction: column;
+    }
+
+    .sidebar {
+        width: 100%;
+        padding: 28px 20px;
+        border-right: none;
+        border-bottom: 1px solid rgba(179, 139, 0, 0.2);
+    }
+
+    .logo-container {
+        margin-bottom: 24px;
+    }
+
+    .side-nav {
+        flex-direction: row;
+        gap: 12px;
+        flex-wrap: wrap;
+    }
+
+    .nav-item {
+        margin-bottom: 0;
+        flex: 1 1 160px;
+        text-align: center;
+    }
+
+    .nav-item:hover {
+        transform: none;
+    }
+
+    .personal-project {
+        position: static;
+        padding: 20px 20px 0;
+        letter-spacing: 4px;
+    }
+
+    .main-content {
+        align-items: flex-start;
+        padding: 24px 20px 40px;
+    }
+
+    .portfolio-container {
+        padding: 0;
+        gap: 36px;
+    }
+
+    .portfolio-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .glass-card {
+        max-width: 100%;
+        padding: 56px 40px;
+    }
+}
+
+@media (max-width: 768px) {
+    .home-layout {
+        display: grid;
+        grid-template-columns: minmax(0, 1fr);
+        align-content: start;
+    }
+
+    .sidebar,
+    .personal-project,
+    .main-content {
+        width: 100%;
+    }
+
+    .personal-project {
+        position: static;
+        top: auto;
+        right: auto;
+        display: block;
+        width: min(100%, 34rem);
+        margin: 0 auto;
+        padding: 0 24px;
+        text-align: left;
+        white-space: nowrap;
+    }
+
+    .main-content {
+        align-items: flex-start;
+        justify-content: flex-start;
+        width: 100%;
+    }
+
+    .portfolio-container {
+        width: min(100%, 34rem);
+        padding: 0 24px 8px;
+        gap: 32px;
+    }
+
+    .hero-section {
+        width: 100%;
+    }
+
+    .name-etc {
+        font-size: clamp(2rem, 7vw, 2.5rem);
+        line-height: 1.15;
+        max-width: 13ch;
+    }
+
+    .experience,
+    .documented {
+        font-size: 1rem;
+        max-width: none;
+    }
+
+    .portfolio-card {
+        width: min(100%, 23rem);
+        padding: 24px;
+        margin: 0 auto;
+    }
+
+    .social-links {
+        gap: 12px;
+    }
+
+    .social-link {
+        flex: 1 1 160px;
+        text-align: center;
+    }
+
+    .glass-card {
+        width: min(100%, 34rem);
+        padding: 40px 24px;
+        border-radius: 28px;
+    }
+
+    .card-header h1 {
+        font-size: clamp(1.6rem, 7vw, 2.2rem);
+    }
+
+    .card-header p {
+        margin-bottom: 36px;
+        letter-spacing: 2px;
+    }
+
+    .card-footer {
+        margin-top: 40px;
+        padding-top: 28px;
+    }
+}
+
+@media (max-width: 480px) {
+    .sidebar {
+        padding: 20px 16px;
+    }
+
+    .logo-container {
+        gap: 12px;
+        margin-bottom: 18px;
+    }
+
+    .star-logo {
+        width: 32px;
+        height: 32px;
+    }
+
+    .app-name {
+        font-size: 0.92rem;
+        letter-spacing: 1.5px;
+    }
+
+    .side-nav {
+        flex-direction: column;
+    }
+
+    .nav-item {
+        width: 100%;
+        padding: 14px 16px;
+    }
+
+    .personal-project {
+        width: min(100%, 30rem);
+        margin: 0 auto;
+        padding: 0 16px;
+        font-size: 0.7rem;
+        letter-spacing: 3px;
+    }
+
+    .main-content {
+        padding: 18px 16px 32px;
+    }
+
+    .portfolio-container {
+        width: min(100%, 30rem);
+        padding: 0;
+    }
+
+    .name-etc {
+        font-size: clamp(1.7rem, 9vw, 2.1rem);
+        max-width: 11ch;
+    }
+
+    .experience,
+    .documented {
+        font-size: 0.95rem;
+        line-height: 1.55;
+    }
+
+    .portfolio-container {
+        gap: 28px;
+    }
+
+    .portfolio-grid {
+        gap: 18px;
+    }
+
+    .portfolio-card {
+        width: 100%;
+        padding: 20px;
+        border-radius: 20px;
+    }
+
+    .skills-tags {
+        gap: 8px;
+    }
+
+    .tag {
+        font-size: 0.8rem;
+    }
+
+    .social-link {
+        width: 100%;
+        flex-basis: 100%;
+    }
+
+    .glass-card {
+        width: min(100%, 30rem);
+        padding: 32px 18px;
+        border-radius: 22px;
+    }
+
+    .interaction-area {
+        gap: 16px;
+    }
+
+    .Theme-input,
+    .premium-button.gold-btn {
+        padding: 16px;
+    }
+
+    .premium-button.gold-btn {
+        font-size: 0.8rem;
+        letter-spacing: 2px;
+    }
+
+    .current-theme-display {
+        flex-direction: column;
+        gap: 6px;
+    }
 }

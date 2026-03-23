@@ -1,4 +1,4 @@
-
+import React from 'react'
 import { Router, Routes, Route, BrowserRouter } from 'react-router-dom'
 import ThemeChanger from './themes.jsx'
 import Home from './myHome.jsx'
@@ -14,9 +14,5 @@ function MainApp() {
     </>
   )
 }
-
-
-
-
 
 export default MainApp
