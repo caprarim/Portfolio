@@ -61,15 +61,15 @@ const Projects = () => {
             imgSrc={"public/projects/6.png"}
           />
           <ProjectCard
-            title="Password Strength Analyer"
-            desc="A compact utility page that checks password quality with a clean layout and simple visual feedback."
+            title="Password Strength Analyzer"
+            desc="A simple utility page that checks password strength with clear feedback and a straightforward layout."
             languages="Javascript, HTML, CSS"
             link1={"https://caprarim.github.io/Password-Strength-Analyzer/"}
             imgSrc={"public/projects/7.png"}
           />
           <ProjectCard
             title="Digital Clock"
-            desc="A compact utility page that checks password quality with a clean layout and simple visual feedback."
+            desc="A clean digital clock interface focused on readability, spacing, and a minimal presentation."
             languages="Javascript and HTML"
             link1={"https://caprarim.github.io/digitalclockapp/"}
             imgSrc={"public/projects/8.png"}
