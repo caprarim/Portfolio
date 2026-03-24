@@ -22,11 +22,7 @@ const Portfolio = () => {
             </p>
           </div>
           <div className="hero-image-shell">
-            <img
-              src="public/jiji.jpg"
-              className="hero-image"
-              alt="Portfolio visual"
-            />
+            <img src="/jiji.jpg" className="hero-image" alt="Portfolio visual" />
           </div>
         </div>
       </section>
@@ -68,7 +64,7 @@ const Portfolio = () => {
               rel="noreferrer"
             >
               <img
-                src="public/yt.png"
+                src="/yt.png"
                 className="social-icon yt"
                 alt="YouTube"
               />
@@ -80,7 +76,7 @@ const Portfolio = () => {
               target="_blank"
             >
               <img
-                src="public/ig.png"
+                src="/ig.png"
                 className="social-icon ig"
                 alt="Instagram"
               />
@@ -92,7 +88,7 @@ const Portfolio = () => {
               target="_blank"
             >
               <img
-                src="public/git.png"
+                src="/git.png"
                 className="social-icon git"
                 alt="GitHub"
               />

@@ -15,7 +15,7 @@ const SideBar = () => {
 
       <div className="top-bar-brand" aria-label="Back to top">
         <img
-          src="public/jiji.jpg"
+          src="/jiji.jpg"
           className="top-bar-image"
           alt="Portfolio logo"
           onClick={() => nav("/")}
