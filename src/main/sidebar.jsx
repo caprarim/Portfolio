@@ -2,6 +2,7 @@ import React from "react";
 import { useNavigate } from "react-router-dom";
 const SideBar = () => {
   let nav = useNavigate();
+  const assetBase = import.meta.env.BASE_URL;
   const nav2Projects = () => {
     nav("/projects");
   };
@@ -15,7 +16,7 @@ const SideBar = () => {
 
       <div className="top-bar-brand" aria-label="Back to top">
         <img
-          src="/jiji.jpg"
+          src={`${assetBase}jiji.jpg`}
           className="top-bar-image"
           alt="Portfolio logo"
           onClick={() => nav("/")}

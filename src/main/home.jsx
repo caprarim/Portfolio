@@ -1,6 +1,8 @@
 import React from "react";
 import SideBar from "./sidebar.jsx";
 const Portfolio = () => {
+  const assetBase = import.meta.env.BASE_URL;
+
   return (
     <main className="portfolio-page">
       <SideBar></SideBar>
@@ -22,7 +24,11 @@ const Portfolio = () => {
             </p>
           </div>
           <div className="hero-image-shell">
-            <img src="/jiji.jpg" className="hero-image" alt="Portfolio visual" />
+            <img
+              src={`${assetBase}jiji.jpg`}
+              className="hero-image"
+              alt="Portfolio visual"
+            />
           </div>
         </div>
       </section>
@@ -64,7 +70,7 @@ const Portfolio = () => {
               rel="noreferrer"
             >
               <img
-                src="/yt.png"
+                src={`${assetBase}yt.png`}
                 className="social-icon yt"
                 alt="YouTube"
               />
@@ -76,7 +82,7 @@ const Portfolio = () => {
               target="_blank"
             >
               <img
-                src="/ig.png"
+                src={`${assetBase}ig.png`}
                 className="social-icon ig"
                 alt="Instagram"
               />
@@ -88,7 +94,7 @@ const Portfolio = () => {
               target="_blank"
             >
               <img
-                src="/git.png"
+                src={`${assetBase}git.png`}
                 className="social-icon git"
                 alt="GitHub"
               />
