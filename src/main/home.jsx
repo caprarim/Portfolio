@@ -11,7 +11,7 @@ const Portfolio = () => {
           <div className="hero-text">
             <div className="eyebrow">Portfolio | About me</div>
             <h1 className="hero-title">
-              Hello, my name is <span className="name-highlight">Talha</span>{" "}
+              Hello, my name is <span className="name-highlight">caprarim</span>{" "}
               and I build{" "}
               <span className="role-highlight">
                 clean front-end experiences
